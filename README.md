@@ -6,7 +6,7 @@ At zeta-alpha we’re building the [next generation neural discovery platform](h
 
 The main objective of this challenge is for you to design a version of our search system that includes:
 - An offline stage that periodically polls multiple data sources (external APIs, websites, etc.), processes them, and populates a search database.
-- A retrieval system that allows users to search, rank and sort the documents from the database.
+- A retrieval system that allows users to search, rank, and sort the documents from the database.
 
 ### Requirements
 Your design should satisfy the following requirements:
@@ -22,11 +22,11 @@ Create a design document showing how the different parts of the system are conne
 
 ## Assignment 2: Implement a search system MVP
 
-In this part of the challenge you are required to create an MVP of the search system. You are provided with a source folder containing multiple PDF documents and your objective is to create a solution capable of:
+In this part of the challenge you are required to create an MVP of the search system. You are provided with a source folder containing multiple PDF documents. Your objective is to implement a solution capable of:
 1. Ingesting, parsing, and storing the provided documents
 1. Retrieving a list of documents by matching the title, authors, and/or content.
 
-**You can find the source documents [here](link-to-sr).**
+**You can find the source documents [here](link-to-s3).**
 
 ### Deliverables
 
@@ -38,5 +38,5 @@ The result should be in the form of functional code along with documentation for
 - The coding assignment should be written in **python**.
 - You can choose any existing libraries and packages that you deem necessary.
 - Expect to be questioned about your technology and architectural decisions, as well as implementation details.
-- Work in an agile way. You might not be able to completely solve all the challenges, so pick wisely.
+- Work in an agile way. You might not be able to completely solve all the assignments, so pick wisely.
 - Don't hesitate to contact us with any clarification questions.
