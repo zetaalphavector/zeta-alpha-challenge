@@ -8,7 +8,7 @@ In this challenge you will be creating an MVP of the search system. You are prov
 1. Ingesting, parsing, and storing the provided documents
 1. Retrieving a list of documents by matching the title, authors, and/or content.
 
-**You can find the source documents [here](link-to-s3).**
+**You can find the source documents [here](https://s3.console.aws.amazon.com/s3/buckets/zeta-alpha-challenge).**
 
 ### Deliverables
 
