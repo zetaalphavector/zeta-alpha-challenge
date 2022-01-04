@@ -31,9 +31,9 @@ How would you address (some of) these challenges when designing a search system?
 
 ## Tips and remarks
 
-- You should not spend more than **4 hours** working on the challenge.
+- Don't hesitate to contact us with any clarification questions.
+- We expect about half a day to build your solution.
 - The coding assignment should be written in **python**.
 - You can choose any existing libraries and packages that you deem necessary.
 - Expect to be questioned about your technology and architectural decisions, as well as implementation details.
 - Work in an agile way. You might not be able to completely solve everything in the assignment, so pick wisely.
-- Don't hesitate to contact us with any clarification questions.
