@@ -10,6 +10,8 @@ In this challenge you will be creating an MVP of the search system. You are prov
 
 **You can find the source documents [here](https://zeta-alpha-challenge.s3.eu-central-1.amazonaws.com/index.html).**
 
+**Note**: You may not have the knowledge to make an exceptional implementation of all parts of this system. Therefore it's recommended that you try to shine in your areas of expertise, while picking pre-built solutions for the others.
+
 ### Deliverables
 
 The result should be in the form of functional code along with documentation for running and using it.
