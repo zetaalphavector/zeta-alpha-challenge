@@ -102,9 +102,9 @@ print(search_api_4.search(4, 50)) # Should get [150, 151, ..., 199]
 
 
 
-Hit: You can think of the solution in 2 parts: 1. What pages should you request from the `SearchEngine`? 2. How should the hits returned from the `SearchEngine` be sliced to return the correct hits to the user? You can request more hits than what the `SearchAPI` will need if that makes the solution simipler.
+*Hit*: You can think of the solution in 2 parts: 1. What pages should you request from the `SearchEngine`? 2. How should the hits returned from the `SearchEngine` be sliced to return the correct hits to the user? You can request more hits than what the `SearchAPI` will need if that makes the solution simipler.
 
-Hint2: Manually write down how the results returned from the `SearchEngine` will look for some cases before you start coding.
+*Hint2*: Manually write down how the results returned from the `SearchEngine` will look for some cases before you start coding.
 
 ## Extra: Refactoring
 
