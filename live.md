@@ -1,6 +1,6 @@
 # Introduction
 
-When implementing a search API (`SearchAPI`) we need to interact with a search engine (`SearchEngine`) to retrieve the hits that match the user query. The search engine will return the hits in pages, where each page contains a number of hits (page size). The user can control which page and page size they want to retrieve. But some times the page and page size values that we send to the search engine are not the same as the ones that the user requested. In this problem set we explore two such cases. Let's define the `SearchEngine` class, which we **don't control** (we can't change its code).
+When implementing a search API (`SearchAPI`) we need to interact with a search engine (`SearchEngine`) to retrieve the hits that match the user query. The search engine will return the hits in pages, where each page contains a number of hits (page size). The user can control which page and page size they want to retrieve. But sometimes the page and page size values that we send to the search engine are not the same as the ones that the user requested. In this problem set we explore two such cases. Let's define the `SearchEngine` class, which we **don't control** (we can't change its code).
 
 ```python
 class SearchEngine:
@@ -65,7 +65,7 @@ What happens if `window_size` is not divisible by `page_size`? How would you han
 
 For performance reasons, sometimes it's better to batch the requests made to a search engine to spread out the load. The requester will still want to get the number of hits they have requested. 
 
-Implement a `SearchAPI` that retrieves **at most** `chunk_size` hits from the `SearchEngine` but in the end, it will returns all the hits that the user requested.
+Implement a `SearchAPI` that retrieves **at most** `chunk_size` hits from the `SearchEngine` but in the end, it will return all the hits that the user requested.
 
 
 ```python
