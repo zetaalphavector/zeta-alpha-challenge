@@ -32,48 +32,81 @@ When using a reranker, we need to retrieve more hits than the user requested to 
 
 However, we should return only the amount of hits that the user requested as well as to respect the page number they selected.
 
-Implement a `SearchAPI` that **always** retrieves `window_size` hits from the `SearchEngine` but it returns only the hits that the user requested.
+Implement a `SearchAPI` that **always** retrieves `window_size` hits from the `SearchEngine`, then call `self.rerank` on these results, and finally return only the amount of hits that the user requested.
 
 ```python
 class SearchAPI:
     def __init__(self, search_engine: SearchEngine, window_size: int):
         self.search_engine = search_engine
         self.window_size = window_size
-    
+
+    def rerank(self, hits):
+        return sorted(hits, key=lambda x: int(x), reverse=True)
+
     def search(self, page: int, page_size: int) -> list:
         # page starts from 1.
         raise NotImplementedError
 
 # Example usage
 search_api = SearchAPI(search_engine, 50)
-print(search_api.search(1, 10)) # Should get [0, 1, ..., 9]
-print(search_api.search(2, 10)) # Should get [10, 11, ..., 19]
-print(search_api.search(3, 10)) # Should get [20, 21, ..., 29]
-print(search_api.search(4, 10)) # Should get [30, 31, ..., 39]
-print(search_api.search(5, 10)) # Should get [40, 41, ..., 49]
-print(search_api.search(6, 10)) # Should get [50, 51, ..., 59]
-print(search_api.search(7, 10)) # Should get [60, 61, ..., 69]
+print(search_api.search(1, 10))  # Should get [49, 48, ..., 40]
+print(search_api.search(2, 10))  # Should get [39, 38, ..., 30]
+print(search_api.search(3, 10))  # Should get [29, 28, ..., 20]
+print(search_api.search(4, 10))  # Should get [19, 18, ..., 10]
+print(search_api.search(5, 10))  # Should get [9, 8, ..., 0]
+print(search_api.search(6, 10))  # Should get [99, 98, ..., 90]
+print(search_api.search(7, 10))  # Should get [89, 88, ..., 80]
 ```
 
 *Hint*: You can assume that `window_size` is divisible by `page_size`.
 
-## Extra
-What happens if `window_size` is not divisible by `page_size`? How would you handle this case?
+To validate your solution, run the following tests:
 
+```python
+class Tests:
+    def __init__(self, search_engine: SearchEngine, impl_cls):
+        self.search_engine = search_engine
+        self.impl_cls = impl_cls
+
+    def run(self, cases):
+        for case in cases:
+            result = self.impl_cls(self.search_engine, case[0]).search(case[1], case[2])
+            assert (
+                result == case[3]
+            ), f"Result for ({case[0]},{case[1]},{case[2]}) was {result}, expected {case[3]}"
+        print("All tests passed!")
+
+
+Tests(search_engine, SearchAPI).run([
+    (50, 1, 10, list(map(str,reversed(range(40,50))))),
+    (50, 2, 10, list(map(str,reversed(range(30,40))))),
+    (50, 3, 10, list(map(str,reversed(range(20,30))))),
+    (50, 4, 10, list(map(str,reversed(range(20,10))))),
+    (50, 5, 10, list(map(str,reversed(range(0,10))))),
+    (50, 6, 10, list(map(str,reversed(range(90,100))))),
+    (50, 7, 10, list(map(str,reversed(range(80,90))))),
+    (50, 8, 10, list(map(str,reversed(range(70,80))))),
+    (50, 9, 10, list(map(str,reversed(range(60,70))))),
+    (50, 10 ,10 ,list(map(str,reversed(range(50,60))))),
+])
+```
+
+## Extra
+
+What happens if `window_size` is not divisible by `page_size`? How would you handle this case?
 
 # 2. Chunk paginator
 
-For performance reasons, sometimes it's better to batch the requests made to a search engine to spread out the load. The requester will still want to get the number of hits they have requested. 
+For performance reasons, sometimes it's better to batch the requests made to a search engine to spread out the load. The requester will still want to get the number of hits they have requested.
 
-Implement a `SearchAPI` that retrieves **at most** `chunk_size` hits from the `SearchEngine` but in the end, it will return all the hits that the user requested.
-
+Implement a `SearchAPI` that retrieves the number of hits that the user requested, but when calling the `SearchEngine`, you can only request **at most** `chunk_size` hits.
 
 ```python
 class SearchAPI:
     def __init__(self, search_engine: SearchEngine, chunk_size: int):
         self.search_engine = search_engine
         self.chunk_size = chunk_size
-    
+
     def search(self, page: int, page_size: int) -> list:
         # page starts from 1.
         raise NotImplementedError
@@ -100,13 +133,29 @@ print(search_api_4.search(3, 50)) # Should get [100, 101, ..., 149]
 print(search_api_4.search(4, 50)) # Should get [150, 151, ..., 199]
 ```
 
-
-
 *Hit*: You can think of the solution in 2 parts: 1. What pages should you request from the `SearchEngine`? 2. How should the hits returned from the `SearchEngine` be sliced to return the correct hits to the user? You can request more hits than what the `SearchAPI` will need if that makes the solution simipler.
 
 *Hint2*: Manually write down how the results returned from the `SearchEngine` will look for some cases before you start coding.
 
+To validate your solution, run the following tests:
+
+```python
+Tests(search_engine, SearchAPI).run([
+    (25, 1, 120, list(map(str, range(0, 120)))),
+    (25, 2, 120, list(map(str, range(120, 240)))),
+    (10, 1, 22, list(map(str, range(0, 22)))),
+    (10, 2, 22, list(map(str, range(22, 44)))),
+    (10, 3, 22, list(map(str, range(44, 66)))),
+    (10, 4, 22, list(map(str, range(66, 88)))),
+    (10, 5, 22, list(map(str, range(88, 110)))),
+    (50, 1, 200, list(map(str, range(0, 200)))),
+    (200, 1, 50, list(map(str, range(0, 50)))),
+    (200, 2, 50, list(map(str, range(50, 100)))),
+    (200, 3, 50, list(map(str, range(100, 150)))),
+    (200, 4, 50, list(map(str, range(150, 200)))),
+])
+```
+
 ## Extra: Refactoring
 
 Can you think of a structure that can be reused for any `SearchEngine` and `SearchAPI` class?
-
