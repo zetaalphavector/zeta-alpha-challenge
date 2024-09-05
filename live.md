@@ -81,7 +81,7 @@ Tests(search_engine, SearchAPI).run([
     (50, 1, 10, list(map(str,reversed(range(40,50))))),
     (50, 2, 10, list(map(str,reversed(range(30,40))))),
     (50, 3, 10, list(map(str,reversed(range(20,30))))),
-    (50, 4, 10, list(map(str,reversed(range(20,10))))),
+    (50, 4, 10, list(map(str,reversed(range(10,20))))),
     (50, 5, 10, list(map(str,reversed(range(0,10))))),
     (50, 6, 10, list(map(str,reversed(range(90,100))))),
     (50, 7, 10, list(map(str,reversed(range(80,90))))),
