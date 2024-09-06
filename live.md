@@ -2,6 +2,7 @@
 
 When implementing a search API (`SearchAPI`) we need to interact with a search engine (`SearchEngine`) to retrieve the hits that match the user query. The search engine will return the hits in pages, where each page contains a number of hits (page size). The user can control which page and page size they want to retrieve. But sometimes the page and page size values that we send to the search engine are not the same as the ones that the user requested. In this problem set we explore two such cases. Let's define the `SearchEngine` class, which we **don't control** (we can't change its code).
 
+
 ```python
 class SearchEngine:
     def __init__(self, n_list: int):
@@ -27,7 +28,7 @@ print(search_engine.search(3, 10)) # Should get [20, 21, ..., 29]
 
 
 # 1. Window paginator
-
+![Reranking Windows](./images/reranking_windows.png)
 When using a reranker, we need to retrieve more hits than the user requested to build the final ordering. This is because there can be hits that are very relevant for the query but are not scored in the top `page_size` hits returned by the search engine.
 
 However, we should return only the amount of hits that the user requested as well as to respect the page number they selected.
