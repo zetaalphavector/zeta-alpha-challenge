@@ -27,7 +27,7 @@ print(search_engine.search(3, 10)) # Should get [20, 21, ..., 29]
 
 
 # 1. Window paginator
-
+![Reranking Windows](./images/reranking_windows.png)
 When using a reranker, we need to retrieve more hits than the user requested to build the final ordering. This is because there can be hits that are very relevant for the query but are not scored in the top `page_size` hits returned by the search engine.
 
 However, we should return only the amount of hits that the user requested as well as to respect the page number they selected.
