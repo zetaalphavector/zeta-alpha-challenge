@@ -1,0 +1,155 @@
+{
+  "_comment": "INTERVIEWER-ONLY. Production-messy source with the traps (empty/404 content, moved uri, delete-then-update ordering, repeated updates).",
+  "crawl": [
+    {
+      "item_id": "DOC-0001",
+      "uri": "client://docs/legal/document-0001.pdf",
+      "metadata": {
+        "title": "Legal Document 1",
+        "item_sensitivity": "internal"
+      }
+    },
+    {
+      "item_id": "DOC-0002",
+      "uri": "client://docs/engineering/document-0002.pdf",
+      "metadata": {
+        "title": "Engineering Document 2",
+        "item_sensitivity": "confidential"
+      }
+    },
+    {
+      "item_id": "DOC-0003",
+      "uri": "client://docs/hr/document-0003.pdf",
+      "metadata": {
+        "title": "Hr Document 3",
+        "item_sensitivity": "public"
+      }
+    },
+    {
+      "item_id": "DOC-0004",
+      "uri": "client://docs/finance/document-0004.pdf",
+      "metadata": {
+        "title": "Finance Document 4",
+        "item_sensitivity": "internal"
+      }
+    },
+    {
+      "item_id": "DOC-0005",
+      "uri": "client://docs/legal/document-0005.pdf",
+      "metadata": {
+        "title": "Legal Document 5",
+        "item_sensitivity": "confidential"
+      }
+    },
+    {
+      "item_id": "DOC-0006",
+      "uri": "client://docs/hr/document-0006.pdf",
+      "metadata": {
+        "title": "Hr Document 6",
+        "item_sensitivity": "public"
+      }
+    },
+    {
+      "item_id": "DOC-0008",
+      "uri": "client://docs/engineering/document-0008.pdf",
+      "metadata": {
+        "title": "Engineering Document 8",
+        "item_sensitivity": "internal"
+      }
+    }
+  ],
+  "content": {
+    "DOC-0001": "Body of legal document 1. Body of legal document 1. Body of legal document 1. Body of legal document 1. Body of legal document 1. Body of legal document 1. Body of legal document 1. Body of legal document 1. ",
+    "DOC-0002": "Body of engineering document 2. Body of engineering document 2. Body of engineering document 2. Body of engineering document 2. Body of engineering document 2. Body of engineering document 2. Body of engineering document 2. Body of engineering document 2. ",
+    "DOC-0003": "",
+    "DOC-0004": null,
+    "DOC-0005": "Body of legal document 5. Body of legal document 5. Body of legal document 5. Body of legal document 5. Body of legal document 5. Body of legal document 5. Body of legal document 5. Body of legal document 5. ",
+    "DOC-0006": "Body of hr document 6. Body of hr document 6. Body of hr document 6. Body of hr document 6. Body of hr document 6. Body of hr document 6. Body of hr document 6. Body of hr document 6. ",
+    "DOC-0007": "Body of finance document 7. Body of finance document 7. Body of finance document 7. Body of finance document 7. Body of finance document 7. Body of finance document 7. Body of finance document 7. Body of finance document 7. ",
+    "DOC-0008": "Body of engineering document 8, third revision. Body of engineering document 8, third revision. Body of engineering document 8, third revision. Body of engineering document 8, third revision. Body of engineering document 8, third revision. Body of engineering document 8, third revision. Body of engineering document 8, third revision. Body of engineering document 8, third revision. "
+  },
+  "delta": [
+    {
+      "changed_at": "2024-06-02T09:00:00",
+      "event_type": "created",
+      "item_id": "DOC-0007",
+      "uri": "client://docs/finance/document-0007.pdf",
+      "metadata": {
+        "title": "Finance Document 7",
+        "item_sensitivity": "internal"
+      }
+    },
+    {
+      "changed_at": "2024-06-03T09:00:00",
+      "event_type": "updated",
+      "item_id": "DOC-0001",
+      "uri": "client://docs/legal/document-0001.pdf",
+      "metadata": {
+        "title": "Legal Document 1 (revised)",
+        "item_sensitivity": "internal"
+      }
+    },
+    {
+      "changed_at": "2024-06-04T09:00:00",
+      "event_type": "deleted",
+      "item_id": "DOC-0002",
+      "uri": "client://docs/engineering/document-0002.pdf"
+    },
+    {
+      "changed_at": "2024-06-05T09:00:00",
+      "event_type": "updated",
+      "item_id": "DOC-0005",
+      "uri": "client://docs/archive/document-0005.pdf",
+      "metadata": {
+        "title": "Legal Document 5 (moved)",
+        "item_sensitivity": "confidential"
+      }
+    },
+    {
+      "changed_at": "2024-06-06T09:00:00",
+      "event_type": "updated",
+      "item_id": "DOC-0006",
+      "uri": "client://docs/hr/document-0006.pdf",
+      "metadata": {
+        "title": "Hr Document 6 (revised)",
+        "item_sensitivity": "public"
+      }
+    },
+    {
+      "changed_at": "2024-06-06T08:00:00",
+      "event_type": "deleted",
+      "item_id": "DOC-0006",
+      "uri": "client://docs/hr/document-0006.pdf"
+    },
+    {
+      "changed_at": "2024-06-07T08:00:00",
+      "event_type": "updated",
+      "item_id": "DOC-0008",
+      "uri": "client://docs/engineering/document-0008.pdf",
+      "metadata": {
+        "title": "Engineering Document 8 (rev 1)",
+        "item_sensitivity": "internal"
+      }
+    },
+    {
+      "changed_at": "2024-06-07T09:00:00",
+      "event_type": "updated",
+      "item_id": "DOC-0008",
+      "uri": "client://docs/engineering/document-0008.pdf",
+      "metadata": {
+        "title": "Engineering Document 8 (rev 2)",
+        "item_sensitivity": "internal"
+      }
+    },
+    {
+      "changed_at": "2024-06-07T10:00:00",
+      "event_type": "updated",
+      "item_id": "DOC-0008",
+      "uri": "client://docs/engineering/document-0008.pdf",
+      "metadata": {
+        "title": "Engineering Document 8 (rev 3)",
+        "item_sensitivity": "internal"
+      }
+    }
+  ]
+}
