@@ -9,4 +9,4 @@ pip install -q -r requirements.txt
 echo ""
 echo "ClientDocs source API (prod) -> http://localhost:8002/docs"
 echo "Ctrl-C to stop."
-uvicorn clientdocs_prod:app --port 8002
+CLIENTDOCS_DATA=data/prod.json uvicorn clientdocs:app --port 8002

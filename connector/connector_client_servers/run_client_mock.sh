@@ -9,4 +9,4 @@ pip install -q -r requirements.txt
 echo ""
 echo "ClientDocs source API (mock) -> http://localhost:8002/docs"
 echo "Ctrl-C to stop."
-uvicorn clientdocs_mock:app --port 8002
+CLIENTDOCS_DATA=data/mock.json uvicorn clientdocs:app --port 8002

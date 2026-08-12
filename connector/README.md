@@ -17,7 +17,16 @@ folder, in its own terminal:
 
 It serves at **http://localhost:8001/docs**.
 
-**ClientDocs (source)** is already running for you at **http://localhost:8002/docs**.
+**ClientDocs (source)**: run the mocked client server in its own terminal:
+```bash
+./connector_client_servers/run_client_mock.sh
+```
+
+It serves at **http://localhost:8002/docs**. The source is a small data-driven server
+(`clientdocs.py`) that loads its documents from a JSON scenario; the script above starts it
+with the mock data in `connector_client_servers/data/mock.json`. Running the server directly
+(`uvicorn clientdocs:app --port 8002` from `connector_client_servers/`) uses that same mock
+scenario by default.
 
 The Swagger UI at `/docs` is the spec for each — read the endpoints and field descriptions there.
 
@@ -50,7 +59,7 @@ returns whatever changed after it.
 | `GET /ingestion/documents/{document_id}` | Read one back (to verify). |
 
 Ingestion document fields:
-- `document_id` (optional — when set, it **must be a UUID**; if omitted, the pipeline generates it as `uuid5(CLIENT_NAME, document_uri)`,
+- `document_id` (optional — when set, it **must be a UUID**; if omitted, the pipeline generates it as `uuid5(CLIENT_NAME, document_uri)`, where `CLIENT_NAME="myclient"` in our case.
 - `document_uri`, `title`, `document_content`, `client_specific_metadata { item_id, item_sensitivity }`.
 The batch response is `{ succeeded, failed }`, e.g.:
 

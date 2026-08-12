@@ -1,0 +1,263 @@
+{
+  "_comment": "Clean happy-path source. Reproduces the original clientdocs_mock behaviour.",
+  "crawl": [
+    {
+      "item_id": "DOC-0001",
+      "uri": "client://docs/legal/document-0001.pdf",
+      "metadata": {
+        "title": "Legal Document 1",
+        "item_sensitivity": "internal"
+      }
+    },
+    {
+      "item_id": "DOC-0002",
+      "uri": "client://docs/engineering/document-0002.pdf",
+      "metadata": {
+        "title": "Engineering Document 2",
+        "item_sensitivity": "confidential"
+      }
+    },
+    {
+      "item_id": "DOC-0003",
+      "uri": "client://docs/hr/document-0003.pdf",
+      "metadata": {
+        "title": "Hr Document 3",
+        "item_sensitivity": "public"
+      }
+    },
+    {
+      "item_id": "DOC-0004",
+      "uri": "client://docs/finance/document-0004.pdf",
+      "metadata": {
+        "title": "Finance Document 4",
+        "item_sensitivity": "internal"
+      }
+    },
+    {
+      "item_id": "DOC-0005",
+      "uri": "client://docs/legal/document-0005.pdf",
+      "metadata": {
+        "title": "Legal Document 5",
+        "item_sensitivity": "confidential"
+      }
+    },
+    {
+      "item_id": "DOC-0006",
+      "uri": "client://docs/engineering/document-0006.pdf",
+      "metadata": {
+        "title": "Engineering Document 6",
+        "item_sensitivity": "public"
+      }
+    },
+    {
+      "item_id": "DOC-0007",
+      "uri": "client://docs/hr/document-0007.pdf",
+      "metadata": {
+        "title": "Hr Document 7",
+        "item_sensitivity": "internal"
+      }
+    },
+    {
+      "item_id": "DOC-0008",
+      "uri": "client://docs/finance/document-0008.pdf",
+      "metadata": {
+        "title": "Finance Document 8",
+        "item_sensitivity": "confidential"
+      }
+    },
+    {
+      "item_id": "DOC-0009",
+      "uri": "client://docs/legal/document-0009.pdf",
+      "metadata": {
+        "title": "Legal Document 9",
+        "item_sensitivity": "public"
+      }
+    },
+    {
+      "item_id": "DOC-0010",
+      "uri": "client://docs/engineering/document-0010.pdf",
+      "metadata": {
+        "title": "Engineering Document 10",
+        "item_sensitivity": "internal"
+      }
+    },
+    {
+      "item_id": "DOC-0011",
+      "uri": "client://docs/hr/document-0011.pdf",
+      "metadata": {
+        "title": "Hr Document 11",
+        "item_sensitivity": "confidential"
+      }
+    },
+    {
+      "item_id": "DOC-0012",
+      "uri": "client://docs/finance/document-0012.pdf",
+      "metadata": {
+        "title": "Finance Document 12",
+        "item_sensitivity": "public"
+      }
+    },
+    {
+      "item_id": "DOC-0013",
+      "uri": "client://docs/legal/document-0013.pdf",
+      "metadata": {
+        "title": "Legal Document 13",
+        "item_sensitivity": "internal"
+      }
+    },
+    {
+      "item_id": "DOC-0014",
+      "uri": "client://docs/engineering/document-0014.pdf",
+      "metadata": {
+        "title": "Engineering Document 14",
+        "item_sensitivity": "confidential"
+      }
+    },
+    {
+      "item_id": "DOC-0015",
+      "uri": "client://docs/hr/document-0015.pdf",
+      "metadata": {
+        "title": "Hr Document 15",
+        "item_sensitivity": "public"
+      }
+    },
+    {
+      "item_id": "DOC-0016",
+      "uri": "client://docs/finance/document-0016.pdf",
+      "metadata": {
+        "title": "Finance Document 16",
+        "item_sensitivity": "internal"
+      }
+    },
+    {
+      "item_id": "DOC-0017",
+      "uri": "client://docs/legal/document-0017.pdf",
+      "metadata": {
+        "title": "Legal Document 17",
+        "item_sensitivity": "confidential"
+      }
+    },
+    {
+      "item_id": "DOC-0018",
+      "uri": "client://docs/engineering/document-0018.pdf",
+      "metadata": {
+        "title": "Engineering Document 18",
+        "item_sensitivity": "public"
+      }
+    },
+    {
+      "item_id": "DOC-0019",
+      "uri": "client://docs/hr/document-0019.pdf",
+      "metadata": {
+        "title": "Hr Document 19",
+        "item_sensitivity": "internal"
+      }
+    },
+    {
+      "item_id": "DOC-0020",
+      "uri": "client://docs/finance/document-0020.pdf",
+      "metadata": {
+        "title": "Finance Document 20",
+        "item_sensitivity": "confidential"
+      }
+    },
+    {
+      "item_id": "DOC-0021",
+      "uri": "client://docs/legal/document-0021.pdf",
+      "metadata": {
+        "title": "Legal Document 21",
+        "item_sensitivity": "public"
+      }
+    },
+    {
+      "item_id": "DOC-0022",
+      "uri": "client://docs/engineering/document-0022.pdf",
+      "metadata": {
+        "title": "Engineering Document 22",
+        "item_sensitivity": "internal"
+      }
+    },
+    {
+      "item_id": "DOC-0023",
+      "uri": "client://docs/hr/document-0023.pdf",
+      "metadata": {
+        "title": "Hr Document 23",
+        "item_sensitivity": "confidential"
+      }
+    },
+    {
+      "item_id": "DOC-0024",
+      "uri": "client://docs/finance/document-0024.pdf",
+      "metadata": {
+        "title": "Finance Document 24",
+        "item_sensitivity": "public"
+      }
+    }
+  ],
+  "content": {
+    "DOC-0001": "Body of legal document 1. Body of legal document 1. Body of legal document 1. Body of legal document 1. Body of legal document 1. Body of legal document 1. Body of legal document 1. Body of legal document 1. ",
+    "DOC-0002": "Body of engineering document 2. Body of engineering document 2. Body of engineering document 2. Body of engineering document 2. Body of engineering document 2. Body of engineering document 2. Body of engineering document 2. Body of engineering document 2. ",
+    "DOC-0003": "Body of hr document 3, revised. Body of hr document 3, revised. Body of hr document 3, revised. Body of hr document 3, revised. Body of hr document 3, revised. Body of hr document 3, revised. Body of hr document 3, revised. Body of hr document 3, revised. ",
+    "DOC-0004": "Body of finance document 4. Body of finance document 4. Body of finance document 4. Body of finance document 4. Body of finance document 4. Body of finance document 4. Body of finance document 4. Body of finance document 4. ",
+    "DOC-0005": "Body of legal document 5. Body of legal document 5. Body of legal document 5. Body of legal document 5. Body of legal document 5. Body of legal document 5. Body of legal document 5. Body of legal document 5. ",
+    "DOC-0006": "Body of engineering document 6. Body of engineering document 6. Body of engineering document 6. Body of engineering document 6. Body of engineering document 6. Body of engineering document 6. Body of engineering document 6. Body of engineering document 6. ",
+    "DOC-0007": "Body of hr document 7. Body of hr document 7. Body of hr document 7. Body of hr document 7. Body of hr document 7. Body of hr document 7. Body of hr document 7. Body of hr document 7. ",
+    "DOC-0008": "Body of finance document 8. Body of finance document 8. Body of finance document 8. Body of finance document 8. Body of finance document 8. Body of finance document 8. Body of finance document 8. Body of finance document 8. ",
+    "DOC-0009": "Body of legal document 9. Body of legal document 9. Body of legal document 9. Body of legal document 9. Body of legal document 9. Body of legal document 9. Body of legal document 9. Body of legal document 9. ",
+    "DOC-0010": "Body of engineering document 10. Body of engineering document 10. Body of engineering document 10. Body of engineering document 10. Body of engineering document 10. Body of engineering document 10. Body of engineering document 10. Body of engineering document 10. ",
+    "DOC-0011": "Body of hr document 11. Body of hr document 11. Body of hr document 11. Body of hr document 11. Body of hr document 11. Body of hr document 11. Body of hr document 11. Body of hr document 11. ",
+    "DOC-0012": "Body of finance document 12. Body of finance document 12. Body of finance document 12. Body of finance document 12. Body of finance document 12. Body of finance document 12. Body of finance document 12. Body of finance document 12. ",
+    "DOC-0013": "Body of legal document 13. Body of legal document 13. Body of legal document 13. Body of legal document 13. Body of legal document 13. Body of legal document 13. Body of legal document 13. Body of legal document 13. ",
+    "DOC-0014": "Body of engineering document 14. Body of engineering document 14. Body of engineering document 14. Body of engineering document 14. Body of engineering document 14. Body of engineering document 14. Body of engineering document 14. Body of engineering document 14. ",
+    "DOC-0015": "Body of hr document 15. Body of hr document 15. Body of hr document 15. Body of hr document 15. Body of hr document 15. Body of hr document 15. Body of hr document 15. Body of hr document 15. ",
+    "DOC-0016": "Body of finance document 16. Body of finance document 16. Body of finance document 16. Body of finance document 16. Body of finance document 16. Body of finance document 16. Body of finance document 16. Body of finance document 16. ",
+    "DOC-0017": "Body of legal document 17. Body of legal document 17. Body of legal document 17. Body of legal document 17. Body of legal document 17. Body of legal document 17. Body of legal document 17. Body of legal document 17. ",
+    "DOC-0018": "Body of engineering document 18. Body of engineering document 18. Body of engineering document 18. Body of engineering document 18. Body of engineering document 18. Body of engineering document 18. Body of engineering document 18. Body of engineering document 18. ",
+    "DOC-0019": "Body of hr document 19. Body of hr document 19. Body of hr document 19. Body of hr document 19. Body of hr document 19. Body of hr document 19. Body of hr document 19. Body of hr document 19. ",
+    "DOC-0020": "Body of finance document 20. Body of finance document 20. Body of finance document 20. Body of finance document 20. Body of finance document 20. Body of finance document 20. Body of finance document 20. Body of finance document 20. ",
+    "DOC-0021": "Body of legal document 21. Body of legal document 21. Body of legal document 21. Body of legal document 21. Body of legal document 21. Body of legal document 21. Body of legal document 21. Body of legal document 21. ",
+    "DOC-0022": "Body of engineering document 22. Body of engineering document 22. Body of engineering document 22. Body of engineering document 22. Body of engineering document 22. Body of engineering document 22. Body of engineering document 22. Body of engineering document 22. ",
+    "DOC-0023": "Body of hr document 23. Body of hr document 23. Body of hr document 23. Body of hr document 23. Body of hr document 23. Body of hr document 23. Body of hr document 23. Body of hr document 23. ",
+    "DOC-0024": "Body of finance document 24. Body of finance document 24. Body of finance document 24. Body of finance document 24. Body of finance document 24. Body of finance document 24. Body of finance document 24. Body of finance document 24. ",
+    "DOC-0025": "Body of legal document 25. Body of legal document 25. Body of legal document 25. Body of legal document 25. Body of legal document 25. Body of legal document 25. Body of legal document 25. Body of legal document 25. ",
+    "DOC-0026": "Body of engineering document 26. Body of engineering document 26. Body of engineering document 26. Body of engineering document 26. Body of engineering document 26. Body of engineering document 26. Body of engineering document 26. Body of engineering document 26. "
+  },
+  "delta": [
+    {
+      "changed_at": "2024-06-02T09:00:00",
+      "event_type": "created",
+      "item_id": "DOC-0025",
+      "uri": "client://docs/legal/document-0025.pdf",
+      "metadata": {
+        "title": "Legal Document 25",
+        "item_sensitivity": "internal"
+      }
+    },
+    {
+      "changed_at": "2024-06-03T09:00:00",
+      "event_type": "created",
+      "item_id": "DOC-0026",
+      "uri": "client://docs/engineering/document-0026.pdf",
+      "metadata": {
+        "title": "Engineering Document 26",
+        "item_sensitivity": "confidential"
+      }
+    },
+    {
+      "changed_at": "2024-06-04T09:00:00",
+      "event_type": "deleted",
+      "item_id": "DOC-0005",
+      "uri": "client://docs/legal/document-0005.pdf"
+    },
+    {
+      "changed_at": "2024-06-05T09:00:00",
+      "event_type": "updated",
+      "item_id": "DOC-0003",
+      "uri": "client://docs/hr/document-0003.pdf",
+      "metadata": {
+        "title": "Hr Document 3 (revised)",
+        "item_sensitivity": "public"
+      }
+    }
+  ]
+}

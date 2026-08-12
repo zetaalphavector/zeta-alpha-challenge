@@ -1,0 +1,9 @@
+{
+  "permissions": {
+    "deny": [
+      "Read(connector/connector_client_servers/clientdocs.py)",
+      "Read(connector/connector_client_servers/data/mock.json)",
+      "Read(connector/connector_client_servers/data/prod.json)"
+    ]
+  }
+}
